@@ -1,25 +1,11 @@
-@font-face {
-    font-family: "Courier Std Bold";
-    src: url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.eot");
-    src: url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.svg#Courier Std Bold")format("svg");
-}
-
-@font-face {
-    font-family: "Courier";
-    src: url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.eot");
-    src: url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.svg#Courier")format("svg");
+.courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .st29{
-    font-family: "Courier Std";
+    font-family: "Courier Prime";
     /* transform: translateX(-0.3px); */
 }
 html, body {
