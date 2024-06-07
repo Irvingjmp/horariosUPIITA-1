@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Courier Std Bold";
+    src: url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.eot");
+    src: url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/106fe9712e448fe96e9fa4983ad1d2bb.svg#Courier Std Bold")format("svg");
+}
+
+@font-face {
+    font-family: "Courier";
+    src: url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.eot");
+    src: url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2c922424939d2493163f367b07507e07.svg#Courier")format("svg");
+}
+
+.st29{
+    font-family: "Courier Std";
+    /* transform: translateX(-0.3px); */
+}
 html, body {
     width: 100%;
     height: 100%;
@@ -19,13 +43,13 @@ body{
 
 @media (max-width: 1250px) {
     body {
-        background-size: 330%; /* Ajusta la altura al 100% */
+        background-size: 200vh; /* Ajusta la altura al 100% */
         overflow-x: hidden;
         overflow-y: hidden;
     }
 
     #Labs1{
-        height: 90vh; 
+        /* height: 90vh;  */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,7 +71,7 @@ body{
 
 .aulas01 {
     width: 100%;
-    height: 90vh; /* Resta la altura del encabezado */
+    height: 100vh; /* Resta la altura del encabezado */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +83,7 @@ body{
 
 .aulas02 {
     width: 100%;
-    height: 90vh; 
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +91,7 @@ body{
 
 .aulas03 {
     width: 100%;
-    height: 90vh; 
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,13 +99,14 @@ body{
 
 .aulas04 {
     width: 100%;
-    height: 90vh; 
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Labs1 {
+    /* margin-top: 5vh; */
     width: 100%;
     height: 100vh; 
     display: flex;
@@ -189,8 +214,8 @@ body{
 /* BOTONES EN ZOOM Y REGRESAR */
 #backButton {
     position: absolute;
-    top: 17px;
-    left: 17px;
+    top: 3vh;
+    left: 1.5vw;
     border: none;
     background: none;
     cursor: pointer;
@@ -203,8 +228,8 @@ body{
 
 #resetZoomButton {
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 3vh;
+    right: 1.5vw;
     border: none;
     background: none;
     cursor: pointer;
