@@ -1,11 +1,13 @@
-.courier-prime-regular {
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
+@font-face {
+    font-family: 'Courier std'; /* Nombre que deseas asignar a tu fuente */
+    src: url('fuentes/CourierStd.otf') format('opentype');
+    /* Incluye otros formatos como .ttf si es necesario */
+    font-weight: normal;
     font-style: normal;
 }
 
 .st29{
-    font-family: "Courier Prime";
+    font-family: "Courier std";
     /* transform: translateX(-0.3px); */
 }
 html, body {
