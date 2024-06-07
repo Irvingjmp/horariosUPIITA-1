@@ -1,0 +1,264 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    /* background: #F9E79F; */
+    background-image: url('imagenes/fondo.jpg');
+    background-color: #F9E79F;
+    background-size: 120 100vh;
+    background-position: center center; 
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-size: 330%; /* Ajusta la altura al 100% */
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #Labs1{
+        height: 90vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mapa {
+        display: flex;
+        height: 100vh; /* Altura del viewport */
+        margin-left: -2px;
+        transform-origin: center center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    
+}
+
+.aulas01 {
+    width: 100%;
+    height: 90vh; /* Resta la altura del encabezado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aulas01 svg {
+    width: 98%;
+}
+
+.aulas02 {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aulas03 {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aulas04 {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Labs1 {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aulas02 svg {
+    width: 98%;
+}
+
+.aulas03 svg {
+    width: 98%
+}
+
+.aulas04 svg {
+    width: 98%;
+}
+
+.Labs1 svg {
+    width: 98%;
+
+}
+
+.Labs2 svg {
+    width: 98%;
+}
+#aulas02 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+}
+
+#aulas02.dragging {
+    cursor: grabbing;
+}
+
+#aulas03 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+}
+
+#aulas03.dragging {
+    cursor: grabbing;
+}
+
+#aulas04 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+}
+
+#aulas04.dragging {
+    cursor: grabbing;
+}
+
+#Labs1 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+    
+}
+
+#Labs1.dragging {
+    cursor: grabbing;
+}
+
+#aulas01 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+}
+
+#aulas01.dragging {
+    cursor: grabbing;
+}
+
+#mapa.dragging {
+    cursor: grabbing;
+}
+
+.mapa{
+    width: 70%;
+    margin: -10% auto 0 10%;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    cursor: grab; /* Cambia el cursor al icono de agarre */
+}
+.mapa #Aulas1:hover,
+    #Aulas2:hover,
+    #Aulas3:hover,
+    #Laboratorios:hover,
+    /* #Epesados:hover, */
+    /*.cls-43:hover,*/
+    #Aulas4:hover{
+    fill: #7e3b3b;
+    cursor:pointer;
+}
+
+.mapa .cls-43{
+    fill: #333333;
+}
+
+
+/* BOTONES EN ZOOM Y REGRESAR */
+#backButton {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#backButton img {
+    width: 80px;
+    height: 80px;
+}
+
+#resetZoomButton {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#resetZoomButton img {
+    width: 90px;
+    height: 90px;
+}
+
+/* Media queries para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 600px) {
+    #backButton img, #resetZoomButton img {
+        width: 35px; /* Tamaño más pequeño para móviles */
+        height: 35px;
+    }
+
+}
+
+/* Clase para resaltar el texto */
+.resaltado {
+    font-size: 14px; /* Tamaño de la fuente */
+    fill: black;
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    stroke: rgb(227, 227, 227); /* Color del contorno */
+    stroke-width: 0.2px; /* Ancho del contorno */
+    
+    paint-order: stroke fill;
+    /* stroke: rgb(210, 210, 210); Color de resaltado */
+    stroke-width: 3px; /* Ancho del resaltado */
+}
+
+  /* Clase para subrayar el texto */
+.nombreMapa {
+    font-size: 25px; /* Tamaño de la fuente */
+    fill: black;
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    stroke: rgb(227, 227, 227); /* Color del contorno */
+    stroke-width: 0.2px; /* Ancho del contorno */
+    font-family: 'Times New Roman', serif;
+    paint-order: stroke fill;
+    /* stroke: rgb(210, 210, 210); Color de resaltado */
+    /* stroke-width: 1px; Ancho del resaltado
+     */
+    cursor:pointer;
+    pointer-events: none; /* Evita que el texto responda a eventos del ratón */
+}
+
+.nombreEd {
+    font-size: 36px; /* Tamaño de la fuente */
+    fill: black;
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    stroke: rgb(202, 202, 195); /* Color del contorno */
+    stroke-width: 3px; /* Ancho del contorno */
+    font-family: 'Bodoni MT', serif;
+    paint-order: stroke fill;
+    cursor:pointer;
+    pointer-events: none; /* Evita que el texto responda a eventos del ratón */
+}
