@@ -17,7 +17,7 @@ body{
     overflow-y: hidden;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1250px) {
     body {
         background-size: 330%; /* Ajusta la altura al 100% */
         overflow-x: hidden;
@@ -32,15 +32,15 @@ body{
     }
     #mapa {
         display: flex;
+        margin-top: -5vh;
         height: 100vh; /* Altura del viewport */
-        margin-left: -2px;
+        margin-left: -1vw;
         transform-origin: center center;
         width: 100%;
         justify-content: center;
-        align-items: center;
+        align-items: center center;
+        overflow: visible;
     }
-
-    
 
     
 }
@@ -160,10 +160,15 @@ body{
 }
 
 .mapa{
-    width: 70%;
-    margin: -10% auto 0 10%;
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    cursor: grab; /* Cambia el cursor al icono de agarre */
+    display: flex;
+        margin-top: -30vh;
+        height: 130vh; /* Altura del viewport */
+        margin-left: -3vw;
+        transform-origin: center center;
+        width: 100%;
+        justify-content: center;
+        align-items: center center;
+        overflow: visible;
 }
 .mapa #Aulas1:hover,
     #Aulas2:hover,
