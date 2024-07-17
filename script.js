@@ -73,6 +73,10 @@ document.getElementById('Laboratorios').addEventListener('click', function() {
     window.location.href = 'pagLabs.html';
 });
 
+document.getElementById('Epesados').addEventListener('click', function() {
+    window.location.href = 'pagPesados.html';
+});
+
 
 // Manejar el evento popstate para volver a la página original al presionar el botón atrás del navegador
 window.addEventListener('popstate', (event) => {

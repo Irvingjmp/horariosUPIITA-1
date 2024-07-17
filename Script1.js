@@ -2,6 +2,7 @@ const aulas01 = document.getElementById('aulas01');
 const svgAulas1 = document.getElementById('Capa_aulas1')
 const _102 = document.getElementById('_102');
 
+
 document.getElementById('_120').style.opacity = '0.5';
 document.getElementById('_110').style.opacity = '0.5';
 document.getElementById('_100').style.opacity = '0.5';
@@ -74,6 +75,7 @@ aulas01.addEventListener('wheel', (event) => {
     scale = Math.min(Math.max(0.8, scale), 8);
     aulas01.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 });
+
 
 
 
@@ -277,11 +279,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (elementoHtml) {
                     if (elemento === 'None' || typeof elemento === 'undefined') {
                         elementoHtml.style.fill = 'green';
-                        // console.log(`La posición [${i}]${horaVi}${diaSemana-1} es null o undefined. Cambiando color.`);
+                        console.log(`La posición [${i}]${horaVi}${diaSemana-1} es null o undefined. Cambiando color.`);
                     } else {
                         elementoHtml.style.fill = 'red';
-                        // console.log(`La posición [${i}]${horaVi}${diaSemana-1} tiene el valor:`, elemento);
-                        agregarDes(bbox,x,y,elemento,elementoM,elementoP);
+                        console.log(`La posición [${i}]${horaVi}${diaSemana-1} tiene el valor:`, elemento);
+                        agregarDes(bbox,x,y,elemento,elementoM,elementoP); //Agregar datos de aula
                     }
                 } else {
                     console.log(`No se encontró el elemento con la ID ${aulas[i]}.`);

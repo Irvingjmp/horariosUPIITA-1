@@ -10,6 +10,7 @@
     font-family: "Courier std";
     /* transform: translateX(-0.3px); */
 }
+
 html, body {
     width: 100%;
     height: 100%;
@@ -18,6 +19,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 body{
     /* background: #F9E79F; */
     background-image: url('imagenes/fondo.jpg');
@@ -59,7 +61,7 @@ body{
 
 .aulas01 {
     width: 100%;
-    height: 100vh; /* Resta la altura del encabezado */
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,28 +71,46 @@ body{
     width: 98%;
 }
 
+
+
 .aulas02 {
     width: 100%;
-    height: 100vh; 
+    height: 70vh; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.aulas03 {
-    width: 100%;
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .aulas04 {
     width: 100%;
-    height: 100vh; 
+    height: 70vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#aulas04 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
+}
+
+#aulas04.dragging {
+    cursor: grabbing;
+}
+
+.aulas04 svg {
+    width: 98%;
+}
+
+.aulas02 svg {
+    width: 98%;
+}
+
+
+#Labs1 {
+    cursor: grab;
+    user-select: none; /* Evita la selección de texto */
 }
 
 .Labs1 {
@@ -102,17 +122,10 @@ body{
     align-items: center;
 }
 
-.aulas02 svg {
-    width: 98%;
+#Labs1.dragging {
+    cursor: grabbing;
 }
 
-.aulas03 svg {
-    width: 98%
-}
-
-.aulas04 svg {
-    width: 98%;
-}
 
 .Labs1 svg {
     width: 98%;
@@ -131,6 +144,14 @@ body{
     cursor: grabbing;
 }
 
+.aulas03 {
+    width: 100%;
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #aulas03 {
     cursor: grab;
     user-select: none; /* Evita la selección de texto */
@@ -140,24 +161,30 @@ body{
     cursor: grabbing;
 }
 
-#aulas04 {
+.aulas03 svg {
+    width: 98%
+}
+
+.pesados {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesados svg {
+    width: 38%;
+}
+
+#pesados {
     cursor: grab;
     user-select: none; /* Evita la selección de texto */
 }
 
-#aulas04.dragging {
+#pesados.dragging {
     cursor: grabbing;
 }
 
-#Labs1 {
-    cursor: grab;
-    user-select: none; /* Evita la selección de texto */
-    
-}
-
-#Labs1.dragging {
-    cursor: grabbing;
-}
 
 #aulas01 {
     cursor: grab;
@@ -187,7 +214,7 @@ body{
     #Aulas2:hover,
     #Aulas3:hover,
     #Laboratorios:hover,
-    /* #Epesados:hover, */
+    #Epesados:hover, 
     /*.cls-43:hover,*/
     #Aulas4:hover{
     fill: #7e3b3b;
@@ -199,7 +226,7 @@ body{
 }
 
 
-/* BOTONES EN ZOOM Y REGRESAR */
+/* BOTONES EN ZOOM Y REGRESAR EDIFICIO CENTRAL*/
 #backButton {
     position: absolute;
     top: 3vh;
@@ -251,6 +278,33 @@ body{
     stroke-width: 3px; /* Ancho del resaltado */
 }
 
+.resaltadoP {
+    font-size: 18px; /* Tamaño de la fuente */
+    fill: black;
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    stroke: rgb(200, 200, 200); /* Color del contorno */
+    stroke-width: 0.1px; /* Ancho del contorno */
+    
+    paint-order: stroke fill;
+    /* stroke: rgb(210, 210, 210); Color de resaltado */
+    stroke-width: 3px; /* Ancho del resaltado */
+}
+
+.nombreEdP {
+    font-size: 45px; /* Tamaño de la fuente */
+    fill: rgb(255, 255, 255);
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    
+    stroke-width: 0px; /* Ancho del contorno */
+    font-family: 'Bodoni MT', serif;
+    paint-order: stroke fill;
+    cursor:pointer;
+    pointer-events: none; /* Evita que el texto responda a eventos del ratón */
+}
+
+
   /* Clase para subrayar el texto */
 .nombreMapa {
     font-size: 25px; /* Tamaño de la fuente */
@@ -264,8 +318,8 @@ body{
     /* stroke: rgb(210, 210, 210); Color de resaltado */
     /* stroke-width: 1px; Ancho del resaltado
      */
-    cursor:pointer;
-    pointer-events: none; /* Evita que el texto responda a eventos del ratón */
+cursor:pointer;
+pointer-events: none; /* Evita que el texto responda a eventos del ratón */
 }
 
 .nombreEd {
@@ -280,3 +334,26 @@ body{
     cursor:pointer;
     pointer-events: none; /* Evita que el texto responda a eventos del ratón */
 }
+
+
+/* Estilos CSS para aulas 4*/
+#div1 {
+    align-items: center;
+    position: relative;
+    top: 10vh; 
+    font-size: 4vw; /* Tamaño de la fuente */
+    fill: black;
+    text-anchor: middle; /* Alineación del texto */
+    font-weight: bold; /* Peso de la fuente */
+    font-family: 'Times New Roman', serif;
+    paint-order: stroke fill;
+    text-align: center; /* Alineación horizontal del contenido */
+    letter-spacing: 2px; 
+    cursor:pointer;
+    pointer-events: none; /* Evita que el texto responda a eventos del ratón */
+
+    color: #151515;
+	-webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
+}
+

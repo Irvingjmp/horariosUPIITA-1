@@ -1,4 +1,4 @@
-const aulas02 = document.getElementById('aulas03');
+const aulas03 = document.getElementById('aulas03');
 const svgAulas1 = document.getElementById('Capa_aulas3')
 
 let aulas = ['_300', '_305', '_311', '_312', '_313', '_314', '_315', '_316', '_322', '_323', '_324','_325','_326'];
@@ -7,7 +7,7 @@ let isDragging = false;
 let startPositionX = 0;
 let startPositionY = 0;
 
-// Variables para aulas02
+// Variables para aulas03
 let scale = 1;
 let translateX = 0;
 let translateY = 0;
@@ -26,39 +26,39 @@ function resetZoom() {
     scale = 1;
     translateX = 0;
     translateY = 0;
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    aulas03.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 }
 
 
-aulas02.addEventListener('mousedown', (event) => {
+aulas03.addEventListener('mousedown', (event) => {
     isDragging = true;
     startPositionX = event.clientX - translateX;
     startPositionY = event.clientY - translateY;
-    aulas02.classList.add('dragging');
+    aulas03.classList.add('dragging');
 });
 
-aulas02.addEventListener('mouseup', () => {
+aulas03.addEventListener('mouseup', () => {
     isDragging = false;
-    aulas02.classList.remove('dragging');
+    aulas03.classList.remove('dragging');
 });
 
-aulas02.addEventListener('mousemove', (event) => {
+aulas03.addEventListener('mousemove', (event) => {
     if (isDragging) {
         const currentX = event.clientX - startPositionX;
         const currentY = event.clientY - startPositionY;
         translateX = currentX;
         translateY = currentY;
-        aulas02.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+        aulas03.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
 
     }
 });
 
-// Evento de rueda para aulas02
-aulas02.addEventListener('wheel', (event) => {
+// Evento de rueda para aulas03
+aulas03.addEventListener('wheel', (event) => {
     // Escala y transformación aquí (sin event.preventDefault())
     scale += event.deltaY * -0.001;
     scale = Math.min(Math.max(0.8, scale), 8);
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    aulas03.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 });
 
 function agregarDes(pos,x,y,texto,textoM,textoP){
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let minutos = fecha.getMinutes();
     let segundos = fecha.getSeconds();
     let horaVi = 9;
-    // diaSemana = 5;
+    diaSemana = 5;
     // hora = 12;
 
     // console.log(`DHM`, diaSemana, hora, minutos);  
@@ -264,10 +264,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (elementoHtml) {
                     if (elemento === 'None' || typeof elemento === 'undefined') {
                         elementoHtml.style.fill = 'green';
-                        // console.log(`La posición [${i + 11}]${horaVi}${diaSemana - 1} es null o undefined. Cambiando color.`);
+                        console.log(`La posición [${i + 11}]${horaVi}${diaSemana - 1} es null o undefined. Cambiando color.`);
                     } else {
                         elementoHtml.style.fill = 'red';
-                        // console.log(`La posición [${i + 11}]${horaVi}${diaSemana - 1} tiene el valor:`, elemento);
+                        console.log(`La posición [${i + 11}]${horaVi}${diaSemana - 1} tiene el valor:`, elemento);
                         agregarDes(bbox, x, y, elemento, elementoM, elementoP);
                     }
                 } else {

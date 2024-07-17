@@ -1,4 +1,4 @@
-const aulas02 = document.getElementById('aulas04');
+const aulas04 = document.getElementById('aulas04');
 const svgAulas1 = document.getElementById('Capa_aulas4')
 
 let aulas = ['_405', '_423', '_424', '_425', '_426'];
@@ -7,7 +7,7 @@ let isDragging = false;
 let startPositionX = 0;
 let startPositionY = 0;
 
-// Variables para aulas02
+// Variables para aulas04
 let scale = 1;
 let translateX = 0;
 let translateY = 0;
@@ -26,39 +26,39 @@ function resetZoom() {
     scale = 1;
     translateX = 0;
     translateY = 0;
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    aulas04.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 }
 
 
-aulas02.addEventListener('mousedown', (event) => {
+aulas04.addEventListener('mousedown', (event) => {
     isDragging = true;
     startPositionX = event.clientX - translateX;
     startPositionY = event.clientY - translateY;
-    aulas02.classList.add('dragging');
+    aulas04.classList.add('dragging');
 });
 
-aulas02.addEventListener('mouseup', () => {
+aulas04.addEventListener('mouseup', () => {
     isDragging = false;
-    aulas02.classList.remove('dragging');
+    aulas04.classList.remove('dragging');
 });
 
-aulas02.addEventListener('mousemove', (event) => {
+aulas04.addEventListener('mousemove', (event) => {
     if (isDragging) {
         const currentX = event.clientX - startPositionX;
         const currentY = event.clientY - startPositionY;
         translateX = currentX;
         translateY = currentY;
-        aulas02.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+        aulas04.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
 
     }
 });
 
-// Evento de rueda para aulas02
-aulas02.addEventListener('wheel', (event) => {
+// Evento de rueda para aulas04
+aulas04.addEventListener('wheel', (event) => {
     // Escala y transformación aquí (sin event.preventDefault())
     scale += event.deltaY * -0.001;
     scale = Math.min(Math.max(0.8, scale), 8);
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    aulas04.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 });
 
 function agregarDes(pos,x,y,texto,textoM,textoP){
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let minutos = fecha.getMinutes();
     let segundos = fecha.getSeconds();
     let horaVi = 9;
-    // diaSemana = 5;
+    diaSemana = 5;
     // hora = 12;
 
     // console.log(`DHM`, diaSemana, hora, minutos);  
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let i = 0; i < 5; i++) {
                 // console.log(aulas[i]);
                 let elementoHtml = document.getElementById(aulas[i]);
-                elementoHtml.style.fill = 'gray';
+                //elementoHtml.style.fill = 'gray';
             }
         } else {
             for (let i = 0; i < 5; i++) {

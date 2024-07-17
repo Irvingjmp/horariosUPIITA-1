@@ -1,6 +1,6 @@
-const aulas02 = document.getElementById('Labs1');
+const laboratorios = document.getElementById('Labs1');
 
-const svgAulas1 = document.getElementById('Capa_Lab1')
+const svglaboratorios = document.getElementById('Capa_Lab1')
 
 let aulas = ['LC100', 'LC102', 'LC103', 'LC112', 'LC113', 'LC114', 'LC121', 'LC122', 'LC117', 'LC118', 'LC119', 'LC128', 'LC132'];
 
@@ -8,7 +8,7 @@ let isDragging = false;
 let startPositionX = 0;
 let startPositionY = 0;
 
-// Variables para aulas02
+// Variables para laboratorios
 let scale = 1;
 let translateX = 0;
 let translateY = 0;
@@ -27,56 +27,56 @@ function resetZoom() {
     scale = 1;
     translateX = 0;
     translateY = 0;
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    laboratorios.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 }
 
 
-aulas02.addEventListener('mousedown', (event) => {
+laboratorios.addEventListener('mousedown', (event) => {
     isDragging = true;
     startPositionX = event.clientX - translateX;
     startPositionY = event.clientY - translateY;
-    aulas02.classList.add('dragging');
+    laboratorios.classList.add('dragging');
 });
 
-aulas02.addEventListener('mouseup', () => {
+laboratorios.addEventListener('mouseup', () => {
     isDragging = false;
-    aulas02.classList.remove('dragging');
+    laboratorios.classList.remove('dragging');
 });
 
-aulas02.addEventListener('mousemove', (event) => {
+laboratorios.addEventListener('mousemove', (event) => {
     if (isDragging) {
         const currentX = event.clientX - startPositionX;
         const currentY = event.clientY - startPositionY;
         translateX = currentX;
         translateY = currentY;
-        aulas02.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+        laboratorios.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
 
     }
 });
 
-// Evento de rueda para aulas02
-aulas02.addEventListener('wheel', (event) => {
+// Evento de rueda para laboratorios
+laboratorios.addEventListener('wheel', (event) => {
     // Escala y transformación aquí (sin event.preventDefault())
     scale += event.deltaY * -0.001;
     scale = Math.min(Math.max(0.8, scale), 8);
-    aulas02.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    laboratorios.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
 });
 
 const textoSVG = document.createElementNS("http://www.w3.org/2000/svg", "text");
 textoSVG.setAttribute("x", 910);
-textoSVG.setAttribute("y", 63); // Ajusta la posición vertical según tus necesidades
+textoSVG.setAttribute("y", 63); 
 textoSVG.setAttribute("text-anchor", "middle");  
 textoSVG.setAttribute('class', 'nombreEd'); 
 textoSVG.textContent = "EDIFICIO CENTRAL SUR";
-svgAulas1.appendChild(textoSVG);
+svglaboratorios.appendChild(textoSVG);
 
 const textoSVG2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
 textoSVG2.setAttribute("x", 910);
-textoSVG2.setAttribute("y", 465); // Ajusta la posición vertical según tus necesidades
+textoSVG2.setAttribute("y", 465); 
 textoSVG2.setAttribute("text-anchor", "middle");  
 textoSVG2.setAttribute('class', 'nombreEd'); 
 textoSVG2.textContent = "EDIFICIO CENTRAL NORTE";
-svgAulas1.appendChild(textoSVG2);
+svglaboratorios.appendChild(textoSVG2);
 
 
 function agregarDes(pos,x,y,texto,textoM,textoP){
@@ -92,7 +92,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
     fondoBlanco.setAttribute("fill", "#C4E6EF"); // Color de fondo blanco
     fondoBlanco.setAttribute("stroke", "black"); // Color del borde
     fondoBlanco.setAttribute("stroke-width", "1");
-    svgAulas1.appendChild(fondoBlanco);
+    svglaboratorios.appendChild(fondoBlanco);
 
     textoSVG.setAttribute("x", x-11+25);
     textoSVG.setAttribute("y", y-27+2);
@@ -102,7 +102,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
     textoSVG.setAttribute("fill", "black");
     textoSVG.setAttribute("font-weight", "bold");
     textoSVG.textContent = texto; 
-    svgAulas1.appendChild(textoSVG);
+    svglaboratorios.appendChild(textoSVG);
 
 
     
@@ -145,7 +145,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
     textoSVGM1.setAttribute("text-anchor", "middle");  
     textoSVGM1.setAttribute('class', 'resaltado'); 
     textoSVGM1.textContent = primeraParte;
-    svgAulas1.appendChild(textoSVGM1);
+    svglaboratorios.appendChild(textoSVGM1);
 
     // Crear y configurar el segundo elemento <text> para la segunda parte del texto si existe
     if (segundaParte !== '') {
@@ -155,7 +155,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
         textoSVGM2.setAttribute("text-anchor", "middle");    
         textoSVGM2.setAttribute('class', 'resaltado'); 
         textoSVGM2.textContent = segundaParte;
-        svgAulas1.appendChild(textoSVGM2);
+        svglaboratorios.appendChild(textoSVGM2);
     }
 
     //Dividir nombre de profe.
@@ -198,7 +198,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
     textoSVGM3.setAttribute("text-anchor", "middle");  
     textoSVGM3.setAttribute('class', 'resaltado'); 
     textoSVGM3.textContent = primeraParte2;
-    svgAulas1.appendChild(textoSVGM3);
+    svglaboratorios.appendChild(textoSVGM3);
 
     // Crear y configurar el segundo elemento <text> para la segunda parte del texto si existe
     if (segundaParte2 !== '') {
@@ -208,7 +208,7 @@ function agregarDes(pos,x,y,texto,textoM,textoP){
         textoSVGM4.setAttribute("text-anchor", "middle");      
         textoSVGM4.setAttribute('class', 'resaltado');    
         textoSVGM4.textContent = segundaParte2;
-        svgAulas1.appendChild(textoSVGM4);
+        svglaboratorios.appendChild(textoSVGM4);
     }
     
 }
